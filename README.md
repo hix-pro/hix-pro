@@ -4,8 +4,17 @@
 
 Small, focused tools that run on your machine or in your CI. No backend, no account, no telemetry — just a check, a JSON report, and an exit code.
 
-**Try in the browser:** [ActionLens](https://hix-pro.github.io/action-lens/) · [ComposeMap](https://hix-pro.github.io/compose-map/)  
+**Try in the browser:** [ActionLens](https://hix-pro.github.io/action-lens/) · [ComposeMap](https://hix-pro.github.io/compose-map/) · [RepoRace](https://hix-pro.github.io/reporace/)  
 **Run locally:** [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) · [EnvAudit](https://github.com/hix-pro/env-audit) · [API Watch](https://github.com/hix-pro/api-watch)
+
+### One command for the suite
+
+[**hix**](https://github.com/hix-pro/hix) detects the tools you have installed, builds a plan for the repository, runs the checks in parallel, and returns one table plus one exit code. It never installs anything or phones home.
+
+```bash
+pipx install git+https://github.com/hix-pro/hix.git
+cd your-repo && hix check
+```
 
 ## Start here
 
@@ -70,7 +79,7 @@ Every tool is tagged [`hix-tools`](https://github.com/topics/hix-tools) — one 
 
 ## Status
 
-All eight tools are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`.
+All eight tools and the `hix` runner are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`; RepoRace runs a labeled static demo on GitHub Pages.
 
 ## Writing
 
