@@ -60,6 +60,8 @@ cd opencode-telegram && ./install.sh
 | [RepoRace](https://github.com/hix-pro/reporace) | Ranks repositories by star velocity, not total stars |
 | [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) | Remote control for a local OpenCode agent |
 
+Every tool is tagged [`hix-tools`](https://github.com/topics/hix-tools) — one page for the whole suite.
+
 ## Why local-first
 
 - **Your code stays put.** No upload, no account, no telemetry. Browser tools parse in the tab; CLIs write to a local file or SQLite.
