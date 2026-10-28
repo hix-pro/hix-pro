@@ -72,6 +72,16 @@ Every tool is tagged [`hix-tools`](https://github.com/topics/hix-tools) — one 
 
 All eight tools are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`.
 
+## Writing
+
+Seven practical posts on the checks that usually depend on someone remembering — env drift, dangerous migrations, contract breaks, workflow risk, Compose red flags, agent remote control, and star velocity. Each one ends with an honest list of what the tool will not do.
+
+[**Read the series →**](https://hix-pro.github.io/blog/) · [RSS](https://hix-pro.github.io/blog/feed.xml)
+
+- [16 things to check in your GitHub Actions workflows](https://hix-pro.github.io/blog/posts/04-action-lens-16-workflow-checks.html) — ActionLens
+- [Docker Compose red flags before you deploy](https://hix-pro.github.io/blog/posts/05-compose-map-red-flags.html) — ComposeMap
+- [Remote-controlling OpenCode from Telegram](https://hix-pro.github.io/blog/posts/06-opencode-telegram-remote-control.html) — OpenCode Telegram
+
 ## Contact
 
 Open an issue on the relevant repository. For security reports, use that repository's **Security** tab — each project ships a `SECURITY.md` with a response timeline.
