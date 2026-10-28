@@ -5,7 +5,7 @@
 Small, focused tools that run on your machine or in your CI. No backend, no account, no telemetry — just a check, a JSON report, and an exit code.
 
 **Try in the browser:** [ActionLens](https://hix-pro.github.io/action-lens/) · [ComposeMap](https://hix-pro.github.io/compose-map/) · [RepoRace](https://hix-pro.github.io/reporace/)  
-**Run locally:** [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) · [EnvAudit](https://github.com/hix-pro/env-audit) · [API Watch](https://github.com/hix-pro/api-watch) · [LockLens](https://github.com/hix-pro/locklens)
+**Run locally:** [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) · [EnvAudit](https://github.com/hix-pro/env-audit) · [API Watch](https://github.com/hix-pro/api-watch) · [LockLens](https://github.com/hix-pro/locklens) · [PlanGuard](https://github.com/hix-pro/planguard)
 
 ### One command for the suite
 
@@ -53,6 +53,7 @@ cd opencode-telegram && ./install.sh
 | [ActionLens](https://hix-pro.github.io/action-lens/) | Risky workflow triggers, token permissions, matrix size, script injection |
 | [ComposeMap](https://hix-pro.github.io/compose-map/) | Privileged containers, leaked secrets, host mounts, startup order |
 | [LockLens](https://github.com/hix-pro/locklens) | Lockfile upgrades, downgrades, and checksum or source drift |
+| [PlanGuard](https://github.com/hix-pro/planguard) | Destructive stateful changes, public ingress, wildcard IAM, disabled encryption |
 | [TypeShift](https://github.com/hix-pro/typeshift) | The semver bump implied by a TypeScript declaration diff |
 
 **Watch the contract**
@@ -80,16 +81,17 @@ Every tool is tagged [`hix-tools`](https://github.com/topics/hix-tools) — one 
 
 ## Status
 
-All nine tools and the `hix` runner are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`; RepoRace runs a labeled static demo on GitHub Pages.
+All ten tools and the `hix` runner are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`; RepoRace runs a labeled static demo on GitHub Pages.
 
 ## Writing
 
-Seven practical posts on the checks that usually depend on someone remembering — env drift, dangerous migrations, contract breaks, workflow risk, Compose red flags, agent remote control, and star velocity. Each one ends with an honest list of what the tool will not do.
+Eight practical posts on the checks that usually depend on someone remembering — env drift, dangerous migrations, contract breaks, workflow risk, Compose red flags, Terraform plan risk, agent remote control, and star velocity. Each one ends with an honest list of what the tool will not do.
 
 [**Read the series →**](https://hix-pro.github.io/blog/) · [RSS](https://hix-pro.github.io/blog/feed.xml)
 
 - [16 things to check in your GitHub Actions workflows](https://hix-pro.github.io/blog/posts/04-action-lens-16-workflow-checks.html) — ActionLens
 - [Docker Compose red flags before you deploy](https://hix-pro.github.io/blog/posts/05-compose-map-red-flags.html) — ComposeMap
+- [Terraform plans hide the risk. PlanGuard reads them.](https://hix-pro.github.io/blog/posts/08-planguard-terraform-plan-review.html) — PlanGuard
 - [Remote-controlling OpenCode from Telegram](https://hix-pro.github.io/blog/posts/06-opencode-telegram-remote-control.html) — OpenCode Telegram
 
 ## Contact
