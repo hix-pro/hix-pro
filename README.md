@@ -5,7 +5,7 @@
 Small, focused tools that run on your machine or in your CI. No backend, no account, no telemetry — just a check, a JSON report, and an exit code.
 
 **Try in the browser:** [ActionLens](https://hix-pro.github.io/action-lens/) · [ComposeMap](https://hix-pro.github.io/compose-map/) · [RepoRace](https://hix-pro.github.io/reporace/)  
-**Run locally:** [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) · [EnvAudit](https://github.com/hix-pro/env-audit) · [API Watch](https://github.com/hix-pro/api-watch)
+**Run locally:** [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) · [EnvAudit](https://github.com/hix-pro/env-audit) · [API Watch](https://github.com/hix-pro/api-watch) · [LockLens](https://github.com/hix-pro/locklens)
 
 ### One command for the suite
 
@@ -52,6 +52,7 @@ cd opencode-telegram && ./install.sh
 | --- | --- |
 | [ActionLens](https://hix-pro.github.io/action-lens/) | Risky workflow triggers, token permissions, matrix size, script injection |
 | [ComposeMap](https://hix-pro.github.io/compose-map/) | Privileged containers, leaked secrets, host mounts, startup order |
+| [LockLens](https://github.com/hix-pro/locklens) | Lockfile upgrades, downgrades, and checksum or source drift |
 | [TypeShift](https://github.com/hix-pro/typeshift) | The semver bump implied by a TypeScript declaration diff |
 
 **Watch the contract**
@@ -79,7 +80,7 @@ Every tool is tagged [`hix-tools`](https://github.com/topics/hix-tools) — one 
 
 ## Status
 
-All eight tools and the `hix` runner are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`; RepoRace runs a labeled static demo on GitHub Pages.
+All nine tools and the `hix` runner are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`; RepoRace runs a labeled static demo on GitHub Pages.
 
 ## Writing
 
