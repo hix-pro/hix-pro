@@ -1,30 +1,75 @@
 ![hix tools](./banner.svg)
 
-**Local-first developer tools that catch what CI misses.** Everything in this suite runs on your machine or in your own CI: no backend, no account, and no data leaving your environment. Each tool does one review job well — and each one ships the machine-readable output and exit codes you need to gate a pipeline on it.
+**Local-first developer tools that catch what CI misses.**
 
-## Tools
+Small, focused tools that run on your machine or in your CI. No backend, no account, no telemetry — just a check, a JSON report, and an exit code.
 
-| Tool | What it catches | Language |
-| --- | --- | --- |
-| [EnvAudit](https://github.com/hix-pro/env-audit) | environment variables that are missing, undocumented, or unused | Rust |
-| [Migration Guard](https://github.com/hix-pro/migration-guard) | dangerous SQL migrations, before they run | Rust |
-| [API Watch](https://github.com/hix-pro/api-watch) | breaking changes in OpenAPI and JSON contracts | Rust |
-| [ActionLens](https://github.com/hix-pro/action-lens) | what a GitHub Actions workflow really does | TypeScript |
-| [ComposeMap](https://github.com/hix-pro/compose-map) | production red flags in Docker Compose stacks | TypeScript |
-| [TypeShift](https://github.com/hix-pro/typeshift) | the semver bump your TypeScript release implies | TypeScript |
-| [RepoRace](https://github.com/hix-pro/reporace) | which GitHub repositories are accelerating | TypeScript |
-| [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) | your local OpenCode agent, remote-controlled | Python |
+**Try in the browser:** [ActionLens](https://hix-pro.github.io/action-lens/) · [ComposeMap](https://hix-pro.github.io/compose-map/)  
+**Run locally:** [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) · [EnvAudit](https://github.com/hix-pro/env-audit) · [API Watch](https://github.com/hix-pro/api-watch)
 
-## Principles
+## Start here
 
-- **Local-first** — your code and data never leave your machine. Tools that parse untrusted input treat every file as hostile.
-- **No backend** — everything runs in the CLI, the browser, or your CI. No accounts, no telemetry, no phone-home.
-- **CI-ready** — JSON output modes, documented exit codes, and GitHub Action wrappers so findings block merges, not just scroll by.
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://hix-pro.github.io/action-lens/"><img src="https://raw.githubusercontent.com/hix-pro/action-lens/main/docs/screenshot.png" width="100%" alt="ActionLens showing a workflow graph and review findings"></a>
+<br><br>
+<strong><a href="https://hix-pro.github.io/action-lens/">ActionLens</a></strong><br>
+GitHub Actions, explained. Paste a workflow and see the job graph, real matrix size, token permissions, risky triggers, and run footprint — before it reaches <code>main</code>.
+</td>
+<td width="50%" valign="top">
+<a href="https://hix-pro.github.io/compose-map/"><img src="https://raw.githubusercontent.com/hix-pro/compose-map/main/docs/screenshot.png" width="100%" alt="ComposeMap showing a service graph and review findings"></a>
+<br><br>
+<strong><a href="https://hix-pro.github.io/compose-map/">ComposeMap</a></strong><br>
+Docker Compose, explained. Drop in a compose file and get a service graph plus a plain-English review of ports, mounts, secrets, and startup order.
+</td>
+</tr>
+</table>
 
-## Getting started
+### Your agent, from your phone
 
-Every repo has a quick start at the top of its README. The Rust CLIs install with `cargo install`, the browser tools run from a deployed demo or locally with `npm run dev`, and the Telegram bridge sets up with one config file and a systemd unit. Check a repo's `examples/` or fixtures when you want to see the rules fire on real input.
+[**OpenCode Telegram**](https://github.com/hix-pro/opencode-telegram) bridges Telegram and a local [OpenCode](https://opencode.ai) server: streaming replies, permission approvals, session and model switching, macros, schedules, and a guarded filesystem view. The allow-list and command guard are documented up front.
+
+```bash
+git clone https://github.com/hix-pro/opencode-telegram.git
+cd opencode-telegram && ./install.sh
+```
+
+## The suite
+
+**Review the change before it merges**
+
+| Tool | Catches |
+| --- | --- |
+| [ActionLens](https://hix-pro.github.io/action-lens/) | Risky workflow triggers, token permissions, matrix size, script injection |
+| [ComposeMap](https://hix-pro.github.io/compose-map/) | Privileged containers, leaked secrets, host mounts, startup order |
+| [TypeShift](https://github.com/hix-pro/typeshift) | The semver bump implied by a TypeScript declaration diff |
+
+**Watch the contract**
+
+| Tool | Catches |
+| --- | --- |
+| [API Watch](https://github.com/hix-pro/api-watch) | Removed endpoints, new required fields, response enum drift |
+| [Migration Guard](https://github.com/hix-pro/migration-guard) | Destructive SQL, blocking DDL, breaking renames |
+| [EnvAudit](https://github.com/hix-pro/env-audit) | Missing, undocumented, unused env vars, and committed secrets |
+
+**Follow the signal**
+
+| Tool | Does |
+| --- | --- |
+| [RepoRace](https://github.com/hix-pro/reporace) | Ranks repositories by star velocity, not total stars |
+| [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) | Remote control for a local OpenCode agent |
+
+## Why local-first
+
+- **Your code stays put.** No upload, no account, no telemetry. Browser tools parse in the tab; CLIs write to a local file or SQLite.
+- **Built for CI.** JSON output, documented exit codes, and GitHub Action wrappers for the Rust CLIs.
+- **Limits are documented.** The tools say what they cannot prove instead of guessing — approximate schema composition, unproven type assignability, heuristic overload pairing.
+
+## Status
+
+All eight tools are MIT-licensed and released. The Rust CLIs ship prebuilt binaries for Linux, macOS, and Windows on their releases pages; ActionLens and ComposeMap are deployed from `main`.
 
 ## Contact
 
-Found a bug or want a feature? Open an issue on the relevant tool. Security reports go through each repo's **Security** tab — see its [SECURITY.md](https://github.com/hix-pro/env-audit/blob/main/SECURITY.md) for the process and response timeline.
+Open an issue on the relevant repository. For security reports, use that repository's **Security** tab — each project ships a `SECURITY.md` with a response timeline.
