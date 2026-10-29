@@ -24,7 +24,7 @@ cd your-repo && hix check
 <a href="https://hix-pro.github.io/action-lens/"><img src="https://raw.githubusercontent.com/hix-pro/action-lens/main/docs/screenshot.png" width="100%" alt="ActionLens showing a workflow graph and review findings"></a>
 <br><br>
 <strong><a href="https://hix-pro.github.io/action-lens/">ActionLens</a></strong><br>
-GitHub Actions, explained. Paste a workflow and see the job graph, real matrix size, token permissions, risky triggers, and run footprint — before it reaches <code>main</code>.
+GitHub Actions, explained. Paste a workflow and see the job graph, real matrix size, token permissions, risky triggers, and run footprint — or compare two revisions to see what a change introduces.
 </td>
 <td width="50%" valign="top">
 <a href="https://hix-pro.github.io/compose-map/"><img src="https://raw.githubusercontent.com/hix-pro/compose-map/main/docs/screenshot.png" width="100%" alt="ComposeMap showing a service graph and review findings"></a>
@@ -50,7 +50,7 @@ cd opencode-telegram && ./install.sh
 
 | Tool | Catches |
 | --- | --- |
-| [ActionLens](https://hix-pro.github.io/action-lens/) | Risky workflow triggers, token permissions, matrix size, script injection |
+| [ActionLens](https://hix-pro.github.io/action-lens/) | Risky workflow triggers, token permissions, matrix size, script injection, changes between revisions |
 | [ComposeMap](https://hix-pro.github.io/compose-map/) | Privileged containers, leaked secrets, host mounts, startup order |
 | [LockLens](https://github.com/hix-pro/locklens) | Lockfile upgrades, downgrades, and checksum or source drift |
 | [PlanGuard](https://github.com/hix-pro/planguard) | Destructive stateful changes, public ingress, wildcard IAM, disabled encryption |
