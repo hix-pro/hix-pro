@@ -61,7 +61,7 @@ cd opencode-telegram && ./install.sh
 | Tool | Catches |
 | --- | --- |
 | [API Watch](https://github.com/hix-pro/api-watch) | Removed endpoints, new required fields, response enum drift |
-| [Migration Guard](https://github.com/hix-pro/migration-guard) | Destructive SQL, blocking DDL, breaking renames |
+| [Migration Guard](https://github.com/hix-pro/migration-guard) | Framework discovery, destructive SQL, blocking DDL, breaking renames |
 | [EnvAudit](https://github.com/hix-pro/env-audit) | Missing, undocumented, unused env vars, committed secrets, and an opt-in example fix |
 
 **Follow the signal**
