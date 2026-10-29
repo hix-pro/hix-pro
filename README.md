@@ -37,7 +37,7 @@ Docker Compose, explained. Drop in a compose file and get a service graph plus a
 
 ### Your agent, from your phone
 
-[**OpenCode Telegram**](https://github.com/hix-pro/opencode-telegram) bridges Telegram and a local [OpenCode](https://opencode.ai) server: streaming replies, permission approvals, session and model switching, macros, schedules, and a guarded filesystem view. The allow-list and command guard are documented up front.
+[**OpenCode Telegram**](https://github.com/hix-pro/opencode-telegram) bridges Telegram and a local [OpenCode](https://opencode.ai) server: streaming replies, permission approvals, session and model switching, macros, and schedules, all with a guarded filesystem view. Run it from source, as a systemd user service, or from the published Docker image. The allow-list and command guard are documented up front.
 
 ```bash
 git clone https://github.com/hix-pro/opencode-telegram.git
