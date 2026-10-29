@@ -69,7 +69,7 @@ cd opencode-telegram && ./install.sh
 | Tool | Does |
 | --- | --- |
 | [RepoRace](https://github.com/hix-pro/reporace) | Ranks repositories by star velocity, not total stars |
-| [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) | Remote control for a local OpenCode agent |
+| [OpenCode Telegram](https://github.com/hix-pro/opencode-telegram) | Remote control for a local OpenCode agent, with a Docker image |
 
 Every tool is tagged [`hix-tools`](https://github.com/topics/hix-tools) — one page for the whole suite.
 
